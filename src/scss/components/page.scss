@@ -1,0 +1,56 @@
+h1{
+  
+}
+h2{
+   
+}
+h3{
+  
+}
+h4 {
+   
+}
+h5{
+   
+}
+
+blockquote{
+    @include typography(getFont(1), 24px, 1.15em, 400, inherit);
+    font-style: italic;
+    letter-spacing: 0.5px;
+    max-width: $containerMaxWidth;
+    box-sizing: border-box;
+    margin: 0 auto 20px;
+
+    @media(max-width: $bp_mobile){
+        font-size: 18px;
+    }
+}
+
+ul, ol, li, p{
+ 
+}
+
+ul, ol{
+   
+}
+
+ul, ol, li{
+   
+}
+
+a{
+    @include typography(inherit, inherit, inherit, inherit, inherit);
+}
+
+b, strong{
+    font-weight: 700;
+}
+
+em{
+    font-style: italic;
+}
+
+img, iframe, svg, video{
+    max-width: 100%;
+}
