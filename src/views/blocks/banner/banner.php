@@ -41,7 +41,7 @@
     else :
 ?>
 
-    <div class="block--custom-layout <?= $class_name ?>" <?= $anchor ?> style="background-color:<?= $background ?>;">
+    <section class="block--custom-layout <?= $class_name ?>" <?= $anchor ?> style="background-color:<?= $background ?>;">
         <div class="canvas-img block-banner__img-banner">
             <canvas width="1440" height="752"></canvas>
 
@@ -71,6 +71,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 <?php endif; ?>

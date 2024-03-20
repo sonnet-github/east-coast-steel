@@ -9,9 +9,18 @@
     text-decoration: none;
     border: 1px solid $lightColor;
     letter-spacing: -0.16px;
+    border-radius: 2px;
     transition: background-color .5s $easeOutExpo;
 
     &:hover {
         background-color: getColor(5);
     }
+}
+
+.site-btn.sm {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.14px;
+    padding: 10px 16px;
+    line-height: 150%;
 }

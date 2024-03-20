@@ -37,7 +37,7 @@
     else :
 ?>
 
-    <div class="block--custom-layout <?= $class_name ?>" <?= $anchor ?> style="background-color:<?= $background ?>;">
+    <section class="block--custom-layout <?= $class_name ?>" <?= $anchor ?> style="background-color:<?= $background ?>;">
         <div class="container">
             <?php if($content):?>
                 <div class="block-welcome-text__content">
@@ -45,6 +45,6 @@
                 </div>
             <?php endif;?>
         </div>
-    </div>
+    </section>
 
 <?php endif; ?>

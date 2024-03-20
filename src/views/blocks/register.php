@@ -30,7 +30,8 @@
             'full-width-banner',
             'wysiwyg',
             'banner',
-            'welcome-text'
+            'welcome-text',
+            'featured-capabilities'
         ];
 
         foreach($acf_blocks as $block){

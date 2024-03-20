@@ -1,0 +1,182 @@
+.block-featured-capabilities {
+    padding: 0 0 80px;
+    position: relative;
+
+    @media (max-width: $bp_mobileMenuShift) {
+        padding: 0 0 60px;
+    }
+
+    @media (max-width: $bp_mobileLandscape) {
+       padding: 45px 0 0;
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: calc(100% - 289px);
+        width: 100%;
+        background-color: getColor(9);
+
+        @media (max-width: $bp_mobileMenuShift) {
+            height: calc(100% - 187px);
+        }
+
+        @media (max-width: $bp_mobileLandscape) {
+            height: 100%;
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 5;
+    }
+
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 80px;
+
+            @media (max-width: $bp_mobileMenuShift) {
+                padding-bottom: 110px;
+            }
+
+            @media (max-width: $bp_mobileLandscape) {
+                justify-content: center;
+                padding-bottom: 60px;
+            }
+        }
+
+            &__feat-img {
+                max-width: 488px;
+
+                @media (max-width: $bp_mobileMenuShift) {
+                    max-width: 338px;
+                }
+
+                @media (max-width: $bp_mobileLandscape) {
+                    display: none;
+                }
+            }
+
+            &__btn {
+                margin-bottom: 20px;
+
+                @media (max-width: $bp_mobileMenuShift) {
+                    margin-bottom: 0;
+                }
+            }
+
+
+        &__row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+
+            @media (max-width: $bp_mobileMenuShift) {
+               align-items: flex-end;
+            }
+        }
+
+            &__col-description {
+                order: 1;
+                color: getColor(5);
+                letter-spacing: -0.16px;
+                font-weight: 500;
+
+                @media (max-width: $bp_mobileMenuShift) {
+                    order: 2;
+                }
+
+                @media (max-width: $bp_mobileLandscape) {
+                    display: none;
+                }
+
+                p {
+                    font-weight: 600;
+                    line-height: 140%;
+                    margin-bottom: 16px;
+                }
+
+                ul {
+                    list-style: none;
+                    padding-left: 0;
+                    line-height: 150%;
+                }
+            }
+
+            &__col-capbility-list {
+                order: 2;
+
+                @media (max-width: $bp_mobileMenuShift) {
+                    order: 1;
+                    width: 100%;
+                    padding-bottom: 44px;
+                }
+            }
+
+                &__capability-list {
+                    padding-left: 0;
+                    list-style: none;
+                    text-align: center;
+
+                    li {
+                        display: block;
+                        margin-bottom: 12px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: getColor(8);
+                        font-weight: 600;
+                        font-size: 32px;
+                        background-color: getColor(3);
+                        padding: 10px 24px;
+                        display: inline-block;
+                        line-height: 130%;
+                        border-radius: 2px;
+
+                        @media (max-width: $bp_mobileLandscape) {
+                            font-size: 24px;
+                            line-height: 140%;
+                        }
+                    }
+                }
+
+                &__capability-text {
+                    padding: 50px 0 0;
+                    text-align: center;
+                    letter-spacing: -0.18px;
+                    font-weight: 500;
+                    color: getColor(3);
+                    line-height: 150%;
+
+                    a {
+                        font-weight: 400;
+                    }
+                }
+
+            &__col-feat-img {
+                order: 3;
+                align-self: end;
+                margin-bottom: -167px;
+
+                @media (max-width: $bp_mobileMenuShift) {
+                    max-width: 244px;
+                    margin-bottom: -145px;
+                }
+
+                @media (max-width: $bp_mobileLandscape) {
+                    max-width: 230px;
+                    margin: 50px auto -80px;
+                }
+            }
+
+
+}
