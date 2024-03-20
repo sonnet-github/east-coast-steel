@@ -1,0 +1,24 @@
+{
+    "name": "acf/welcome-text",
+    "title": "Welcome Text",
+    "description": "Theme styled Welcome Text block.",
+    "category": "custom-layout",
+    "icon": "editor-aligncenter",
+    "keywords": ["welcome-text", "text", "rich text", "accent"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "welcome-text.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "welcome-text/preview.jpg"
+            }
+        }
+    }
+}

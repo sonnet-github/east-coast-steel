@@ -29,7 +29,8 @@
         $acf_blocks = [
             'full-width-banner',
             'wysiwyg',
-            'banner'
+            'banner',
+            'welcome-text'
         ];
 
         foreach($acf_blocks as $block){

@@ -1,7 +1,11 @@
-h1{
+h1, h2, h3, h4, h5 {
     font-weight: 600;
-    font-size: 56px;
     color: inherit;
+}
+
+h1{
+    letter-spacing: 0.56px;
+    line-height: 120%;
 
     @media (max-width: $bp_mobileLandscape) {
        font-size: 40px;
@@ -10,10 +14,21 @@ h1{
     }
 }
 h2{
-   
+    letter-spacing: 0.48px;
+    font-size: 48px;
+    line-height: 120%;
 }
 h3{
-  
+    font-size: 40px;
+    letter-spacing: 0.4px;
+    line-height: 120%;
+    font-weight: 500;
+
+    @media (max-width: $bp_mobileLandscape) {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 130%;
+    }
 }
 h4 {
    
