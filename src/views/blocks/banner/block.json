@@ -1,0 +1,24 @@
+{
+    "name": "acf/banner",
+    "title": "Banner",
+    "description": "Theme styled Banner block.",
+    "category": "custom-layout",
+    "icon": "cover-image",
+    "keywords": ["banner", "full width", "image"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "banner.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "banner/preview.jpg"
+            }
+        }
+    }
+}

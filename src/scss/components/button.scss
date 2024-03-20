@@ -7,6 +7,8 @@
     color: $lightColor;
     padding: 14px 18px;
     text-decoration: none;
+    border: 1px solid $lightColor;
+    letter-spacing: -0.16px;
     transition: background-color .5s $easeOutExpo;
 
     &:hover {

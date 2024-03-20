@@ -29,7 +29,7 @@
 
 
 ?>
-<header id="page-header" class="page-header--<?= $header_type ?>">
+<header id="page-header">
     <div class="ph-content">
         <div class="ph-top hidden-mobile-landscape">
             <?php if($social_media):?>

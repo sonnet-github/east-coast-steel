@@ -20,6 +20,15 @@ body {
     width: 100%;
     max-width: $pageMaxWidth;
     margin: auto;
+    padding-top: 155px;
+
+    @media (max-width: $bp_mobileMenuShift) {
+        padding-top: 140px;
+    }
+
+    @media (max-width: $bp_mobileLandscape) {
+        padding-top: 48px;
+    }
 }
 
 &.scroll-lock,
@@ -132,6 +141,21 @@ ol{
     padding-right: $gutter;
     margin-left: auto;
     margin-right: auto;
+
+    @media screen and (max-width: $bp_desktopSmall) {
+        width: 970px;
+    }
+
+    @media screen and (max-width: $bp_mobileMenuShift) {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media screen and (max-width: $bp_mobileLandscape) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 .site-smi {
@@ -187,5 +211,24 @@ ol{
         &:last-child {
             margin-bottom: 0;
         }
+    }
+}
+
+.canvas-img {
+    display: block;
+    position: relative;
+
+    canvas {
+        display: block;
+        width: 100%;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }

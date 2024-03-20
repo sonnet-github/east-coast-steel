@@ -28,7 +28,8 @@
         // Add your ACF Blocks here
         $acf_blocks = [
             'full-width-banner',
-            'wysiwyg'
+            'wysiwyg',
+            'banner'
         ];
 
         foreach($acf_blocks as $block){

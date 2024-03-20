@@ -1,6 +1,12 @@
 #page-header{
     padding: 30px $gutter;
     border-bottom: 1px solid getColor(6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $lightColor;
+    z-index: 200;
 
     @media screen and (max-width: $bp_mobileMenuShift) {
         padding: 30px $gutterMedium;
