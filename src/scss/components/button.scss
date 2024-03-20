@@ -1,0 +1,15 @@
+.site-btn {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    background-color: getColor(4);
+    color: $lightColor;
+    padding: 14px 18px;
+    text-decoration: none;
+    transition: background-color .5s $easeOutExpo;
+
+    &:hover {
+        background-color: getColor(5);
+    }
+}

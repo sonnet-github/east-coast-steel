@@ -1,7 +1,7 @@
 /* Colors */
     $colorScheme : (
         // Color scheme 1
-        (#032C1F, #223628, #C9CDBE, #000000, #98AA6C, #204535),
+        (#2D3648, #438aca, #192F56, #336DAC, #1F407A, #579AD1),
         // Color scheme 2
         (#002755, #FFFFFF, #000000)
     );
@@ -24,8 +24,8 @@
     $activeFontScheme : 1;
     // default typography config
     $fallbackFont : serif;
-    $defaultFontSize : 14px;
-    $defaultLineHeight : 14px;
+    $defaultFontSize : 16px;
+    $defaultLineHeight : 18px;
 
 /* Measurements */
     $pageMaxWidth : 100%;
@@ -33,7 +33,7 @@
     $contentMaxWidth: 100%;
 
     // Gutters
-    $gutter : 20px;
+    $gutter : 15px;
     $gutterThin : 10px;
     $gutterMedium : 30px;
     $gutterDivider : 40px;
