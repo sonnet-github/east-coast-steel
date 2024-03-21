@@ -31,7 +31,8 @@
             'wysiwyg',
             'banner',
             'welcome-text',
-            'featured-capabilities'
+            'featured-capabilities',
+            'logo-text-list'
         ];
 
         foreach($acf_blocks as $block){

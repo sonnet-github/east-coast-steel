@@ -1,0 +1,24 @@
+{
+    "name": "acf/logo-text-list",
+    "title": "Logo Text List",
+    "description": "Theme styled Logo Text List block.",
+    "category": "custom-layout",
+    "icon": "align-full-width",
+    "keywords": ["logo-text-list", "text", "logo"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "logo-text-list.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "logo-text-list/preview.jpg"
+            }
+        }
+    }
+}
