@@ -1,0 +1,24 @@
+{
+    "name": "acf/featured-products",
+    "title": "Featured Products",
+    "description": "Theme styled Featured Products block.",
+    "category": "custom-layout",
+    "icon": "slides",
+    "keywords": ["featured-products", "slider", "carousel", "product"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "featured-products.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "featured-products/preview.jpg"
+            }
+        }
+    }
+}

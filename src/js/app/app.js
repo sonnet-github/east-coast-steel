@@ -5,6 +5,7 @@ import './lazyload/contentlazyload.ux';
 
 // components
 import './components/header.ux';
+import './components/featured-products.ux';
 
 class WebApp {
 

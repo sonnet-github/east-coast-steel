@@ -15,7 +15,7 @@
 
     // Get acf fields value and set default
     $theme = get_field('theme') ?: 'light';
-    $background = get_field('background_color') ?: '#FFFFFF';
+    $background = get_field('background_color') ?: 'transparent';
     $content = get_field('content');
     $logo_text_list = get_field('logo_text_list');
 
