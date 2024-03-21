@@ -236,3 +236,33 @@ ol{
 .border-none {
     border: none !important;
 }
+
+.owl-carousel {
+
+    .owl-dots {
+
+        button.owl-dot {
+            -webkit-appearance: none;
+            appearance: none;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0;
+            background-color: transparent;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid  getColor(3);
+            margin-right: 8px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+            
+            &.active {
+                background-color: getColor(3);
+            }
+        }
+    }
+
+}
+

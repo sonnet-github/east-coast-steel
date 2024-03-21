@@ -33,7 +33,8 @@
             'welcome-text',
             'featured-capabilities',
             'logo-text-list',
-            'featured-products'
+            'featured-products',
+            'reviews'
         ];
 
         foreach($acf_blocks as $block){

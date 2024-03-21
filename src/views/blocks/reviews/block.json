@@ -1,0 +1,24 @@
+{
+    "name": "acf/reviews",
+    "title": "Reviews",
+    "description": "Theme styled Reviews block.",
+    "category": "custom-layout",
+    "icon": "slides",
+    "keywords": ["reviews", "text", "testimonial"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "reviews.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "reviews/preview.jpg"
+            }
+        }
+    }
+}

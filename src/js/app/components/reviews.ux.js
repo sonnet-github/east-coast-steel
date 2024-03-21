@@ -1,6 +1,6 @@
 import 'owl.carousel';
 
-class FeaturedProductsUX {
+class ReviewsUX {
 
     constructor($block) {
 
@@ -9,7 +9,7 @@ class FeaturedProductsUX {
     }
 
     init() {
-
+        
         this.initializeSlider();
     }
 
@@ -17,7 +17,6 @@ class FeaturedProductsUX {
 
         const block = this.block;
         const slider = this.slider;
-        const controlsContainer = this.controlsContainer;
 
         if(!slider.length) {
 
@@ -37,21 +36,18 @@ class FeaturedProductsUX {
 
         slider.owlCarousel({
             items: 1,
-            margin: 24,
+            margin: 30,
             loop: false,
-            dots: false,
-            nav: true,
-            navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
+            nav: false,
             navElement: 'button',
-            navContainer: '.owl-carousel-controls',
+            dots: true,
             responsive: {
                 768: {
-                    items: 1,
-                    margin: 30
-                },
-                992: {
-                    items: 3
-                },
+                    dots: false,
+                    nav: true,
+                    navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
+                    dots: false,
+                }
             }
         });
 
@@ -62,9 +58,9 @@ class FeaturedProductsUX {
 
 $(function(){
 
-    if($('[data-ux="featured-products"]').length) {
+    if($('[data-ux="reviews"]').length) {
 
-        let _module = new FeaturedProductsUX($('[data-ux="featured-products"]'));
+        let _module = new ReviewsUX($('[data-ux="reviews"]'));
 
         _module.init();
     }

@@ -31,9 +31,21 @@ h3{
         line-height: 130%;
     }
 }
+
 h4 {
-   
+    font-size: 32px;
+    line-height: 130%;
+
+    @media (max-width: $bp_mobileMenuShift) {
+        max-width: 647px;
+    }
+
+    @media (max-width: $bp_mobileLandscape) {
+        font-size: 24px;
+        line-height: 140%;
+    }
 }
+
 h5{
    
 }

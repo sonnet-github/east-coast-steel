@@ -26,7 +26,9 @@
 }
 
 .slide-next-button,
-.slide-prev-button {
+.slide-prev-button,
+.owl-carousel .owl-nav button.slide-next-button,
+.owl-carousel .owl-nav button.slide-prev-button {
     -webkit-appearance: none;
     appearance: none;
     padding: 0;
