@@ -17,6 +17,7 @@
     $theme = get_field('theme') ?: 'light';
     $background = get_field('background_color') ?: 'transparent';
     $content = get_field('content');
+    $reviews_list = get_field('reviews_list');
 
     // Create class attribute allowing for custom "className" and "align" values.
     $class_name = 'block-reviews';
@@ -39,35 +40,36 @@
 
     <section class="block--custom-layout <?= $class_name ?>" <?= $anchor ?> style="background-color:<?= $background ?>;" data-ux="reviews">
         <div class="container">
-            <div class="block-reviews__slider-wrapper">
-                <div class="block-reviews__slider owl-carousel reviews-slider">
+            <?php if($reviews_list):?>
+                <div class="block-reviews__slider-wrapper">
+                    <div class="block-reviews__slider owl-carousel reviews-slider">
 
-                    <div class="block-reviews__slide">
-                        <div class="block-reviews__img">
-                            <img src="/wp-content/uploads/2024/03/placeholder-3.png" alt="Placeholder" width="111" height="83">
-                        </div>
-                        <h4>Lorem ipsum dolor  sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  magna aliqua</h4>
-                        <p>– Name here <span>Position, Company</span></p>
+                        <?php foreach($reviews_list as $review):?>
+                            <?php if($review):?>
+
+                                <div class="block-reviews__slide">
+
+                                    <?php if($review['image']):?>
+                                        <div class="block-reviews__img">
+                                            <img src="<?= $review['image']['url']?>" alt="<?= $review['image']['alt']?>" width="111" height="83">
+                                        </div>
+                                    <?php endif;?>
+
+                                    <?php if($review['content']):?>
+                                        <h4><?= $review['content']?></h4>
+                                    <?php endif;?>
+
+                                    <?php if($review['name'] || $review['description']):?>
+                                        <p>– <?= $review['name']?> <span><?= $review['description']?></span></p>
+                                    <?php endif;?>
+                                </div>
+
+                            <?php endif;?>
+                        <?php endforeach;?>
+
                     </div>
-
-                    <div class="block-reviews__slide">
-                        <div class="block-reviews__img">
-                            <img src="/wp-content/uploads/2024/03/placeholder-3.png" alt="Placeholder" width="111" height="83">
-                        </div>
-                        <h4>Lorem ipsum dolor  sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  magna aliqua</h4>
-                        <p>– Name here <span>Position, Company</span></p>
-                    </div>
-
-                    <div class="block-reviews__slide">
-                        <div class="block-reviews__img">
-                            <img src="/wp-content/uploads/2024/03/placeholder-3.png" alt="Placeholder" width="111" height="83">
-                        </div>
-                        <h4>Lorem ipsum dolor  sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  magna aliqua</h4>
-                        <p>– Name here <span>Position, Company</span></p>
-                    </div>
-
                 </div>
-            </div>
+            <?php endif;?>
         </div>
     </section>
 
