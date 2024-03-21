@@ -42,62 +42,26 @@
         <div class="container">
             <?php if($logo_text_list):?>
                 <div class="block-logo-text-list__list">
+
+                    <?php foreach($logo_text_list as $item):?>
+                        <?php if($item):?>
+                            <div class="block-logo-text-list__item">
+                                <div class="block-logo-text-list__item-inner">
+                                    <?php if($item['image']):?>
+                                        <div class="block-logo-text-list__item-logo">
+                                            <img src="<?= $item['image']['url']?>" alt="<?= $item['image']['alt']?>" width="91" height="91">
+                                        </div>
+                                    <?php endif;?>
+                                    <?php if($item['content']):?>
+                                        <div class="block-logo-text-list__item-content">
+                                            <?= $item['content']?>
+                                        </div>
+                                    <?php endif;?>
+                                </div>
+                            </div>
+                        <?php endif;?>
+                    <?php endforeach;?>
                 
-                    <div class="block-logo-text-list__item">
-                        <div class="block-logo-text-list__item-inner">
-                            <div class="block-logo-text-list__item-logo">
-                                <img src="/wp-content/uploads/2024/03/placeholder-3.png" alt="Placeholder" width="91" height="91">
-                            </div>
-                            <div class="block-logo-text-list__item-content">
-                                <p>Flexibility to accommodate small and large orders  </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="block-logo-text-list__item">
-                        <div class="block-logo-text-list__item-inner">
-                            <div class="block-logo-text-list__item-logo">
-                                <img src="/wp-content/uploads/2024/03/placeholder-3.png" alt="Placeholder" width="91" height="91">
-                            </div>
-                            <div class="block-logo-text-list__item-content">
-                                <p>Customers aren’t just a number. Long term relationships are central and we really ‘get’ our small to mid-market customers  </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="block-logo-text-list__item">
-                        <div class="block-logo-text-list__item-inner">
-                            <div class="block-logo-text-list__item-logo">
-                                <img src="/wp-content/uploads/2024/03/placeholder-3.png" alt="Placeholder" width="91" height="91">
-                            </div>
-                            <div class="block-logo-text-list__item-content">
-                                <p>Longevity: our staff have been here in the industry and know the products inside and out, some of them for over 20 years </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="block-logo-text-list__item">
-                        <div class="block-logo-text-list__item-inner">
-                            <div class="block-logo-text-list__item-logo">
-                                <img src="/wp-content/uploads/2024/03/placeholder-3.png" alt="Placeholder" width="91" height="91">
-                            </div>
-                            <div class="block-logo-text-list__item-content">
-                                <p>Our attention to detail is second to none and we provide quality products we stand behind. </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="block-logo-text-list__item">
-                        <div class="block-logo-text-list__item-inner">
-                            <div class="block-logo-text-list__item-logo">
-                                <img src="/wp-content/uploads/2024/03/placeholder-3.png" alt="Placeholder" width="91" height="91">
-                            </div>
-                            <div class="block-logo-text-list__item-content">
-                                <p>Faster turnaround around times. We have the process and experience to ensure your project orders move with speed and reliability.  </p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             <?php endif;?>
         </div>
