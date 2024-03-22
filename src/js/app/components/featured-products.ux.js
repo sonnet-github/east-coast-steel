@@ -44,6 +44,7 @@ class FeaturedProductsUX {
             navText: ['<i class="fas fa-arrow-left"></i>', '<i class="fas fa-arrow-right"></i>'],
             navElement: 'button',
             navContainer: '.owl-carousel-controls',
+            navSpeed: 1300,
             responsive: {
                 768: {
                     items: 1,

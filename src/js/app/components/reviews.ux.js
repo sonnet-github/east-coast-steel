@@ -41,6 +41,9 @@ class ReviewsUX {
             nav: false,
             navElement: 'button',
             dots: true,
+            autoplay: true,
+            autoplaySpeed: 1300,
+            navSpeed: 1300,
             responsive: {
                 768: {
                     dots: false,
