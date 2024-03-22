@@ -58,6 +58,24 @@
                     overflow: hidden;
                     border-radius: 2px;
                     margin-bottom: 24px;
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: $darkColor;
+                        opacity: 0;
+                        transition: opacity 1s $easeOutExpo;
+                    }
+
+                    &:hover::after {
+                        opacity: .40;
+                    }
 
                     @media (max-width: $bp_desktopSmall) {
                         max-width: calc(100% - 30px);
@@ -69,6 +87,14 @@
 
                     @media (max-width: $bp_mobileLandscape) {
                         max-width: unset;
+                    }
+
+                    img {
+                        transition: transform 1s $easeOutExpo;
+                    }
+
+                    &:hover img {
+                        transform: scale(1.05);
                     }
                 }
                 
