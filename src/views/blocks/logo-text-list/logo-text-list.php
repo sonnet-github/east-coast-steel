@@ -40,12 +40,14 @@
 
     <section class="block--custom-layout <?= $class_name ?>" <?= $anchor ?> style="background-color:<?= $background ?>;">
         <div class="container">
-            <?php if($logo_text_list):?>
+            <?php if($logo_text_list):
+                $count = 0;
+            ?>
                 <div class="block-logo-text-list__list">
 
                     <?php foreach($logo_text_list as $item):?>
                         <?php if($item):?>
-                            <div class="block-logo-text-list__item">
+                            <div class="block-logo-text-list__item" data-aos="fade-in" data-aos-delay="<?= $count?>00">
                                 <div class="block-logo-text-list__item-inner">
                                     <?php if($item['image']):?>
                                         <div class="block-logo-text-list__item-logo">
@@ -60,7 +62,7 @@
                                 </div>
                             </div>
                         <?php endif;?>
-                    <?php endforeach;?>
+                    <?php $count+= 2;endforeach;?>
                 
                 </div>
             <?php endif;?>

@@ -41,7 +41,7 @@
     <section class="block--custom-layout <?= $class_name ?>" <?= $anchor ?> style="background-color:<?= $background ?>;" data-ux="reviews">
         <div class="container">
             <?php if($reviews_list):?>
-                <div class="block-reviews__slider-wrapper">
+                <div class="block-reviews__slider-wrapper" data-aos="fade-up">
                     <div class="block-reviews__slider owl-carousel reviews-slider">
 
                         <?php foreach($reviews_list as $review):?>

@@ -40,7 +40,7 @@
     <section class="block--custom-layout <?= $class_name ?>" <?= $anchor ?> style="background-color:<?= $background ?>;">
         <div class="container">
             <?php if($content):?>
-                <div class="block-welcome-text__content">
+                <div class="block-welcome-text__content" data-aos="zoom-in">
                    <?= $content?>
                 </div>
             <?php endif;?>

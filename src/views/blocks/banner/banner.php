@@ -58,7 +58,7 @@
         </div>
         <div class="block-banner__content-holder">
             <div class="container">
-                <div class="block-banner__content">
+                <div class="block-banner__content" data-aos="fade-left">
                     <?php if($subtitle):?>
                         <small><?= $subtitle?></small>
                     <?php endif;?>

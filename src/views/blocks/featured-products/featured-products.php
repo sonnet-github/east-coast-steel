@@ -74,7 +74,7 @@
 ?>
 
     <section class="block--custom-layout <?= $class_name ?>" <?= $anchor ?> style="background-color:<?= $background ?>;" data-ux="featured-products">
-        <div class="block-featured-products__wrapper">
+        <div class="block-featured-products__wrapper" data-aos="fade-left">
             <?php if($button):?>
                 <a href="<?= $button['url']?>" target="<?= $button['target']?>" class="site-btn sm border-none block-featured-products__btn"><?= $button['title']?></a>
             <?php endif;?>

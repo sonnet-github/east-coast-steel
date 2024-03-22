@@ -49,7 +49,7 @@
         <div class="container">
             <div class="block-featured-capabilities__top">
                 <?php if($image_1):?>
-                    <div class="block-featured-capabilities__feat-img canvas-img">
+                    <div class="block-featured-capabilities__feat-img canvas-img" data-aos="fade-up">
                         <canvas width="488" height="400"></canvas>
                         <img src="<?= $image_1['url']?>" alt="<?= $image_1['alt']?>">
                     </div>
@@ -63,15 +63,15 @@
             <div class="block-featured-capabilities__row">
                 <div class="block-featured-capabilities__col-capbility-list">
                     <?php if($capabilities_list):?>
-                    <ul class="block-featured-capabilities__capability-list">
-                        <?php foreach($capabilities_list as $item):?>
-                            <?php if($item['capability']):?>
-                                <li>
-                                    <a href="<?= $item['capability']['url']?>" target="<?= $item['capability']['target']?>"><?= $item['capability']['title']?></a>
-                                </li>
-                            <?php endif;?>
-                        <?php endforeach;?>
-                    </ul>
+                        <ul class="block-featured-capabilities__capability-list" data-aos="fade-zoom-in">
+                            <?php foreach($capabilities_list as $item):?>
+                                <?php if($item['capability']):?>
+                                    <li>
+                                        <a href="<?= $item['capability']['url']?>" target="<?= $item['capability']['target']?>"><?= $item['capability']['title']?></a>
+                                    </li>
+                                <?php endif;?>
+                            <?php endforeach;?>
+                        </ul>
                     <?php endif;?>
                     <?php if($capabilities_list_text):?>
                         <div class="block-featured-capabilities__capability-text">
@@ -93,14 +93,16 @@
                     </ul>
                     <?php endif;?>
                 </div>
+
                 <?php if($image_2):?>
  
                     <div class="block-featured-capabilities__col-feat-img">
-                        <div class="block-featured-capabilities__feat-img-2 canvas-img">
+                        <div class="block-featured-capabilities__feat-img-2 canvas-img" data-aos="fade-left">
                             <canvas width="280" height="229"></canvas>
                             <img src="<?= $image_2['url']?>" alt="<?= $image_2['alt']?>">
                         </div>
                     </div>
+
                 <?php endif;?>
             </div>
         </div>
