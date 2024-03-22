@@ -43,6 +43,15 @@
     border-radius: 2px;
     cursor: pointer;
     transition: background-color .4s $easeOutExpo;
+    
+    &.sm {
+        width: 32px;
+        height: 32px;
+
+        i {
+            font-size: 14px;
+        }
+    }
 
     &.disabled {
         pointer-events: none;
