@@ -1,7 +1,7 @@
 //modules
 import { CommonHelper } from './utils/common.helper';
 import './lazyload/contentlazyload.ux';
-// import fancybox from '@fancyapps/fancybox';
+import AOS from 'aos';
 
 // components
 import './components/header.ux';
@@ -49,6 +49,11 @@ class WebApp {
 
         $('.service-item').bind('click', function(){
             $(this).toggleClass('active-item');
+        });
+
+        AOS.init({
+            once: true,
+            duration: 1000
         });
 
     }

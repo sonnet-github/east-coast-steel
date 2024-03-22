@@ -283,3 +283,10 @@ ol{
 
 }
 
+// disable aos on mobile
+[data-aos] {
+    @media (max-width: $bp_mobileMenuShift) {
+        opacity: 1 !important;
+        transform: unset !important;
+    }
+}

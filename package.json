@@ -38,6 +38,7 @@
   "dependencies": {
     "@vimeo/player": "^2.11.0",
     "@zoomus/websdk": "^1.7.6",
+    "aos": "^3.0.0-beta.6",
     "gijgo": "^1.9.13",
     "jquery": "^3.2.0",
     "jquery-ui-bundle": "^1.12.1-migrate",
