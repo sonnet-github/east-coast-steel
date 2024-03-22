@@ -7,22 +7,24 @@
  * @since SDEV WP Theme 2.0
  */  
     $footer_logo = get_field('footer_logo_image', 'options');
+    $footer_logo_secondary = get_field('footer_logo_secondary', 'options');
+    $copyright_content = get_field('copyright_line', 'options');
 
 ?>
 <div class="pf-lower">
     <div class="pf-container">
-        <div class="pf-logo">
-            <a href="#">
-                <img src="<?= $footer_logo['url']?>" alt="Logo" class="pf-logo-default">
-                <img src="/wp-content/uploads/2024/03/logo-footer-mobile.svg" alt="" class="pf-logo-secondary">
-            </a>
-        </div>
-        <div class="pf-copyright">
-            <ul>
-                <li>All rights reserved © 2024 East Coast Steel</li>
-                <li><a href="#">Policies</a></li>
-                <li><a href="#">Terms and conditions</a></li>
-            </ul>
-        </div>
+        <?php if($footer_logo || $footer_logo_secondary):?>
+            <div class="pf-logo">
+                <a href="#">
+                    <img src="<?= $footer_logo['url']?>" alt="<?= $footer_logo['alt']?>" class="pf-logo-default">
+                    <img src="<?= $footer_logo_secondary['url']?>" alt="<?= $footer_logo_secondary['alt']?>" class="pf-logo-secondary">
+                </a>
+            </div>
+        <?php endif;?>
+        <?php if($copyright_content):?>
+            <div class="pf-copyright">
+                <?= $copyright_content?>
+            </div>
+        <?php endif;?>
     </div>
 </div>
