@@ -194,6 +194,22 @@ ol{
     border: none;
     background: transparent;
     padding: 0;
+
+    &.active .icon-menu em {
+
+        &:nth-child(2) {
+            opacity: 0;
+        }
+
+        &:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+
+        &:nth-child(3) {
+            transform: rotate(-45deg) translate(4px, -5px);
+        }
+        
+    }
 }
 
 .icon-menu {
@@ -207,6 +223,7 @@ ol{
         border-radius: 5px;
         background-color: getColor(3);
         margin-bottom: 4px;
+        transition: transform .4s $easeOutExpo, opacity .4s $easeOutExpo;
 
         &:last-child {
             margin-bottom: 0;

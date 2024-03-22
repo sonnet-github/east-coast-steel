@@ -66,13 +66,46 @@
                 <?php if($header_cta):?>
                     <a href="<?= $header_cta['url']?>" target="<?= $header_cta['target']?>" class="site-btn ph-btn hidden-mobile-landscape"><?= $header_cta['title']?></a>
                 <?php endif;?>
-                <button type="button" class="burger-menu-btn">
+                <button type="button" class="burger-menu-btn burger-menu-trigger">
                     <span class="icon-menu">
                         <em></em>
                         <em></em>
                         <em></em>
                     </span>
                 </button>
+            </div>
+        </div>
+    </div>
+    <div class="ph-mobile-menu-holder">
+        <div class="ph-mobile-menu">
+            <div class="ph-mobile-menu-inner">
+                <nav>
+                    <?php wp_nav_menu( array( 'sort_column' => 'menu_order', 'menu_id' => 'ph-nav-mobile', 'theme_location' => 'primary-menu', 'menu_class' => 'ph-nav-mobile') ); ?>
+                </nav>
+                <?php if($header_cta):?>
+                    <div class="ph-mobile-cta">
+                        <a href="<?= $header_cta['url']?>" target="<?= $header_cta['target']?>" class="site-btn ph-btn"><?= $header_cta['title']?></a>
+                    </div>
+                <?php endif;?>
+                <div class="ph-mobile-social">
+                    <p>Follow us</p>
+                    <ul class="site-smi">
+                        <?php foreach($social_media as $smi):?>
+                            <?php if($smi):?>
+                                <li>
+                                    <a href="<?= $smi['url']?>" target="_blank" aria-label="social media">
+                                        <?= $smi['icon']?>
+                                    </a>
+                                </li>
+                            <?php endif;?>
+                        <?php endforeach;?>
+                    </ul>
+                </div>
+                <?php if($header_link):?>
+                    <div class="ph-mobile-link">
+                        <a href="<?= $header_link['url']?>" target="<?= $header_link['target']?>" class="ph-link"><?= $header_link['title']?></a>
+                    </div>
+                <?php endif;?>
             </div>
         </div>
     </div>

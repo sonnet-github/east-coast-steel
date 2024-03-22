@@ -9,7 +9,7 @@ class HeaderUX {
             search_toggle :  $('#nav-search > i')
         }
 
-        this.$mobile_menu = $('#mobile-menu');
+        this.mobile_menu = $('.ph-mobile-menu-holder');
         this.is_mobile_menu_active = false;
 
         this.$mobile_menu_items = $('#mobile-menu nav > a, #mobile-menu nav > div');
@@ -17,6 +17,7 @@ class HeaderUX {
         this.$search_input = $('input[name="search"]');
 
         this.sticky_class = 'sticky-mode';
+        this.burgerMenuTrigger = $('.burger-menu-trigger');
 
     }
 
@@ -26,7 +27,7 @@ class HeaderUX {
         this.bindEventTriggers();
         this.bindSearch();
         this.bindScroll();
-        this.bindMobileSubNavToggle();
+        // this.bindMobileSubNavToggle();
 
         $(window).resize(() => {
             this.adjustNav();
@@ -48,17 +49,35 @@ class HeaderUX {
     bindEventTriggers() {
 
         this.$triggers.mobile_menu_toggle.unbind('click');
-        this.$triggers.mobile_menu_toggle.bind('click', () => {
-            this.toggleMobileMenu();
-        });
+        // this.$triggers.mobile_menu_toggle.bind('click', () => {
+        //     this.toggleMobileMenu();
+        // });
 
         this.$triggers.search_toggle.unbind('click');
         this.$triggers.search_toggle.bind('click', () => {
             this.toggleSearchBar();
         });
 
+        this.burgerMenuTrigger.on('click', () => {
+
+            if(this.mobile_menu.hasClass('active')) {
+
+                this.mobile_menu.slideUp();
+                this.mobile_menu.removeClass('active');
+                this.burgerMenuTrigger.removeClass('active');
+
+                return;
+            }
+
+            this.mobile_menu.slideDown();
+            this.mobile_menu.addClass('active');
+            this.burgerMenuTrigger.addClass('active');
+
+        });
+
         $('.ux-scroll-to-anchor').bind('click', () => {
             this.closeMobileMenu();
+            
         });
 
     }
