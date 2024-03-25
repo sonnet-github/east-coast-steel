@@ -18,6 +18,7 @@
     $background = get_field('background_color') ?: '#e3f0f8';
     $content = get_field('content');
     $title = get_field('title');
+    $tabs = get_field('tabs');
 
     // Create class attribute allowing for custom "className" and "align" values.
     $class_name = 'block-image-content-tabs';
@@ -41,169 +42,100 @@
     <section class="block--custom-layout <?= $class_name ?>" <?= $anchor ?> style="background-color:<?= $background ?>;" data-ux="image-content-tabs">
         <div class="container">
             <div class="block-image-content-tabs__inner">
-                <h3>Overview heading</h3>
-                <div class="block-image-content-tabs__content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. </p>
-                </div>
+
+                <?php if($title):?>
+                    <h3><?= $title?></h3>
+                <?php endif;?>
+
+                <?php if($content):?>
+                    <div class="block-image-content-tabs__content">
+                        <?= $content?>
+                    </div>
+                <?php endif;?>
 
                 <div class="block-image-content-tabs__tab-holder">
                     <div class="block-image-content-tabs__tab-left">
-                        <ul class="block-image-content-tabs__tab-btn-list">
-                            <li><a href="#" class="tab-btn active" data-id="1">Mini Slitting</a></li>
-                            <li><a href="#" class="tab-btn" data-id="2">Large Slitting</a></li>
-                            <li><a href="#" class="tab-btn" data-id="3">Precision Shearing</a></li>
-                            <li><a href="#" class="tab-btn" data-id="4">Contract Storage</a></li>
-                            <li><a href="#" class="tab-btn" data-id="5">Bulk Coil Sales</a></li>
-                        </ul>
+                        <?php if($tabs):
+                            $count = 1;    
+                        ?>
+                            <ul class="block-image-content-tabs__tab-btn-list">
+                                <?php foreach($tabs as $tab_btn):?>
+                                    <?php if($tab_btn['title']):?>
+                                        <li><a href="#" class="tab-btn <?= $count === 1 ? 'active': ''?>" data-id="<?= $count?>"><?= $tab_btn['title']?></a></li>
+                                    <?php endif;?>
+                                <?php $count++; endforeach;?>
+                            </ul>
+                        <?php endif;?>
                     </div>
                     <div class="block-image-content-tabs__tab-right">
 
-                        <div class="block-image-content-tabs__tab-item active tab-item" data-id="1">
+                        <?php if($tabs):
+                            $tab_count = 1;    
+                        ?>
+                            <?php foreach($tabs as $tab_item):?>
+                                <?php if($tab_item):?>
 
-                            <div class="block-image-content-tabs__img canvas-img">
-                                <canvas width="592" height="356"></canvas>
-                                <img src="/wp-content/uploads/2024/03/banner-placeholder.jpg" alt="">
-                            </div>
+                                    <div class="block-image-content-tabs__tab-item tab-item <?= $tab_count === 1 ? 'active' : ''?>" data-id="<?= $tab_count?>">
 
-                            <div class="block-image-content-tabs__tab-item-content">
-                                <p>Uniquely crafted to be narrower than any other slit liner, we take pride in being one of the exclusive few in the country with the expertise and machinery to achieve this level of slitting specification. </p>
-                            </div>
+                                        <?php if($tab_item['image']):?>
+                                            <div class="block-image-content-tabs__img canvas-img">
+                                                <canvas width="592" height="356"></canvas>
+                                                <img src="<?= $tab_item['image']['url']?>" alt="<?= $tab_item['image']['alt']?>">
+                                            </div>
+                                        <?php endif;?>
 
-                        </div>
+                                        <?php if($tab_item['content']):?>
+                                            <div class="block-image-content-tabs__tab-item-content">
+                                                <?= $tab_item['content']?>
+                                            </div>
+                                        <?php endif;?>
 
-                        <div class="block-image-content-tabs__tab-item tab-item" data-id="2">
+                                    </div>
 
-                            <div class="block-image-content-tabs__img canvas-img">
-                                <canvas width="592" height="356"></canvas>
-                                <img src="/wp-content/uploads/2024/03/banner-placeholder.jpg" alt="">
-                            </div>
+                                <?php endif;?>
+                            <?php $tab_count++; endforeach;?>
 
-                            <div class="block-image-content-tabs__tab-item-content">
-                                <p>Uniquely crafted to be narrower than any other slit liner, we take pride in being one of the exclusive few in the country with the expertise and machinery to achieve this level of slitting specification. </p>
-                            </div>
-
-                        </div>
-
-                        <div class="block-image-content-tabs__tab-item tab-item" data-id="3">
-
-                            <div class="block-image-content-tabs__img canvas-img">
-                                <canvas width="592" height="356"></canvas>
-                                <img src="/wp-content/uploads/2024/03/banner-placeholder.jpg" alt="">
-                            </div>
-
-                            <div class="block-image-content-tabs__tab-item-content">
-                                <p>Uniquely crafted to be narrower than any other slit liner, we take pride in being one of the exclusive few in the country with the expertise and machinery to achieve this level of slitting specification. </p>
-                            </div>
-
-                        </div>
-
-                        <div class="block-image-content-tabs__tab-item tab-item" data-id="4">
-
-                            <div class="block-image-content-tabs__img canvas-img">
-                                <canvas width="592" height="356"></canvas>
-                                <img src="/wp-content/uploads/2024/03/banner-placeholder.jpg" alt="">
-                            </div>
-
-                            <div class="block-image-content-tabs__tab-item-content">
-                                <p>Uniquely crafted to be narrower than any other slit liner, we take pride in being one of the exclusive few in the country with the expertise and machinery to achieve this level of slitting specification. </p>
-                            </div>
-
-                        </div>
-
-                        <div class="block-image-content-tabs__tab-item tab-item" data-id="5">
-
-                            <div class="block-image-content-tabs__img canvas-img">
-                                <canvas width="592" height="356"></canvas>
-                                <img src="/wp-content/uploads/2024/03/banner-placeholder.jpg" alt="">
-                            </div>
-
-                            <div class="block-image-content-tabs__tab-item-content">
-                                <p>Uniquely crafted to be narrower than any other slit liner, we take pride in being one of the exclusive few in the country with the expertise and machinery to achieve this level of slitting specification. </p>
-                            </div>
-
-                        </div>
+                        <?php endif;?>
 
                     </div>
                 </div>
 
-                <div class="block-image-content-tabs__mobile-content">
+                <?php if($tabs):?>
+                    <div class="block-image-content-tabs__mobile-content">
 
-                    <div class="block-image-content-tabs__tab-item mobile">
+                        <?php foreach($tabs as $item_content):?>
 
-                        <h6>Mini Slitting</h6>
+                            <?php if($item_content):?>
+                                <div class="block-image-content-tabs__tab-item mobile">
 
-                        <div class="block-image-content-tabs__img canvas-img">
-                            <canvas width="342" height="203"></canvas>
-                            <img src="/wp-content/uploads/2024/03/banner-placeholder.jpg" alt="">
-                        </div>
+                                    <?php if($item_content['title']):?>
+                                        <h6><?= $item_content['title']?></h6>
+                                    <?php endif;?>
 
-                        <div class="block-image-content-tabs__tab-item-content">
-                            <p>Uniquely crafted to be narrower than any other slit liner, we take pride in being one of the exclusive few in the country with the expertise and machinery to achieve this level of slitting specification. </p>
-                        </div>
+                                    <?php if($item_content['image']):?>
 
-                    </div>
+                                        <div class="block-image-content-tabs__img canvas-img">
+                                            <canvas width="342" height="203"></canvas>
+                                            <img src="<?= $item_content['image']['url']?>" alt="<?= $item_content['title']?>">
+                                        </div>
 
-                    <div class="block-image-content-tabs__tab-item mobile">
+                                    <?php endif;?>
 
-                        <h6>Large Slitting</h6>
-                        
-                        <div class="block-image-content-tabs__img canvas-img">
-                            <canvas width="342" height="203"></canvas>
-                            <img src="/wp-content/uploads/2024/03/banner-placeholder.jpg" alt="">
-                        </div>
+                                    <?php if($item_content['content']):?>
 
-                        <div class="block-image-content-tabs__tab-item-content">
-                            <p>Uniquely crafted to be narrower than any other slit liner, we take pride in being one of the exclusive few in the country with the expertise and machinery to achieve this level of slitting specification. </p>
-                        </div>
+                                        <div class="block-image-content-tabs__tab-item-content">
+                                            <?= $item_content['content']?>
+                                        </div>
 
-                    </div>
+                                    <?php endif;?>
 
-                    <div class="block-image-content-tabs__tab-item mobile">
+                                </div>
+                            <?php endif;?>
 
-                        <h6>Precision Shearing</h6>
-                        
-                        <div class="block-image-content-tabs__img canvas-img">
-                            <canvas width="342" height="203"></canvas>
-                            <img src="/wp-content/uploads/2024/03/banner-placeholder.jpg" alt="">
-                        </div>
-
-                        <div class="block-image-content-tabs__tab-item-content">
-                            <p>Uniquely crafted to be narrower than any other slit liner, we take pride in being one of the exclusive few in the country with the expertise and machinery to achieve this level of slitting specification. </p>
-                        </div>
+                        <?php endforeach;?>
 
                     </div>
-
-                    <div class="block-image-content-tabs__tab-item mobile">
-
-                        <h6>Contract Storage</h6>
-                        
-                        <div class="block-image-content-tabs__img canvas-img">
-                            <canvas width="342" height="203"></canvas>
-                            <img src="/wp-content/uploads/2024/03/banner-placeholder.jpg" alt="">
-                        </div>
-
-                        <div class="block-image-content-tabs__tab-item-content">
-                            <p>Uniquely crafted to be narrower than any other slit liner, we take pride in being one of the exclusive few in the country with the expertise and machinery to achieve this level of slitting specification. </p>
-                        </div>
-
-                    </div>
-
-                    <div class="block-image-content-tabs__tab-item mobile">
-
-                        <h6>Bulk Coil Sales</h6>
-                        
-                        <div class="block-image-content-tabs__img canvas-img">
-                            <canvas width="342" height="203"></canvas>
-                            <img src="/wp-content/uploads/2024/03/banner-placeholder.jpg" alt="">
-                        </div>
-
-                        <div class="block-image-content-tabs__tab-item-content">
-                            <p>Uniquely crafted to be narrower than any other slit liner, we take pride in being one of the exclusive few in the country with the expertise and machinery to achieve this level of slitting specification. </p>
-                        </div>
-
-                    </div>
-
-                </div>
+                <?php endif;?>
 
             </div>
         </div>
