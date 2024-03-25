@@ -1,0 +1,24 @@
+{
+    "name": "acf/image-content-tabs",
+    "title": "Image Content Tabs",
+    "description": "Theme styled Image Content Tabs block.",
+    "category": "custom-layout",
+    "icon": "table-col-after",
+    "keywords": ["image-content-tabs", "text", "tab", "image"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "image-content-tabs.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "image-content-tabs/preview.jpg"
+            }
+        }
+    }
+}

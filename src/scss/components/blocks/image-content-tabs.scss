@@ -1,0 +1,158 @@
+.block-image-content-tabs {
+    background-color: getColor(9);
+    padding: 70px 0 100px;
+
+    @media (max-width: $bp_mobileLandscape) {
+        padding: 70px 0;
+    }
+
+    &__inner {
+
+        & > h3 {
+            color: getColor(3);
+            margin-bottom: 12px;
+        }
+    }
+
+        &__content {
+            font-size: 18px;
+            line-height: 150%;
+            letter-spacing: -0.18px;
+            font-weight: 500;
+            color: getColor(5);
+        }
+
+    &__tab-holder {
+        display: flex;
+        flex-wrap: wrap;
+        border-top: 1px solid getColor(3);
+        margin-top: 47px;
+        padding: 80px 0 0;
+
+        @media (max-width: $bp_mobileMenuShift) {
+            display: block;
+            padding-top: 42px;
+        }
+    }
+
+        &__tab-left {
+            width: 42.54%;
+
+            @media (max-width: $bp_mobileMenuShift) {
+                width: 100%;
+                margin-bottom: 21px;
+            }
+
+            @media (max-width: $bp_mobileLandscape) {
+                display: none !important;
+            }
+        }
+
+            &__tab-btn-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                @media (max-width: $bp_mobileMenuShift) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    margin: 0 -15px;
+                    height: 152px;
+                }
+
+                li {
+                    margin-bottom: 28px;
+
+                    @media (max-width: $bp_mobileMenuShift) {
+                        width: calc(100% / 3);
+                        display: inline-block;
+                        vertical-align: top;
+                        padding: 14px 15px;
+                        margin: 0;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: 10px 16px;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 140%;
+                    color: getColor(3);
+                    background-color: transparent;
+                    text-align: center;
+                    min-width: 213px;
+                    transition: background-color .3s $easeOutExpo, color .3s $easeOutExpo;
+
+                    @media (max-width: $bp_mobileMenuShift) {
+                        width: 100%;
+                        min-width: unset;
+                    }
+
+                    &.active,&:hover {
+                        background-color: getColor(3);
+                        color: getColor(8);
+                    }
+                }
+            }
+
+        &__tab-right {
+            width: 57.46%;
+
+            @media (max-width: $bp_mobileMenuShift) {
+                width: 100%;
+            }
+
+            @media (max-width: $bp_mobileLandscape) {
+                display: none !important;
+            }
+        }
+
+            &__tab-item {
+                
+                @media (min-width: 768px) {
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+
+                
+            }
+            
+
+                &__img {
+                    display: block;
+                    position: relative;
+                }
+
+                &__tab-item-content {
+                    font-weight: 500;
+                    color: getColor(3);
+                    letter-spacing: -0.16px;
+                    padding: 37px 0 0;
+                    line-height: 150%;
+
+                    @media (max-width: $bp_mobileLandscape) {
+                        padding-top: 20px;
+                    }
+                }
+
+                
+            &__tab-item.mobile {
+
+                h6 {
+                    margin-bottom: 24px;
+                    color: getColor(3);
+                }
+            }
+
+
+}
