@@ -38,7 +38,7 @@
     else :
 ?>
 
-    <section class="block--custom-layout <?= $class_name ?>" <?= $anchor ?> style="background-color:<?= $background ?>;">
+    <section class="block--custom-layout <?= $class_name ?>" <?= $anchor ?> style="background-color:<?= $background ?>;" data-ux="image-content-tabs">
         <div class="container">
             <div class="block-image-content-tabs__inner">
                 <h3>Overview heading</h3>
@@ -49,16 +49,16 @@
                 <div class="block-image-content-tabs__tab-holder">
                     <div class="block-image-content-tabs__tab-left">
                         <ul class="block-image-content-tabs__tab-btn-list">
-                            <li><a href="#" class="active">Mini Slitting</a></li>
-                            <li><a href="#">Large Slitting</a></li>
-                            <li><a href="#">Precision Shearing</a></li>
-                            <li><a href="#">Contract Storage</a></li>
-                            <li><a href="#">Bulk Coil Sales</a></li>
+                            <li><a href="#" class="tab-btn active" data-id="1">Mini Slitting</a></li>
+                            <li><a href="#" class="tab-btn" data-id="2">Large Slitting</a></li>
+                            <li><a href="#" class="tab-btn" data-id="3">Precision Shearing</a></li>
+                            <li><a href="#" class="tab-btn" data-id="4">Contract Storage</a></li>
+                            <li><a href="#" class="tab-btn" data-id="5">Bulk Coil Sales</a></li>
                         </ul>
                     </div>
                     <div class="block-image-content-tabs__tab-right">
 
-                        <div class="block-image-content-tabs__tab-item active">
+                        <div class="block-image-content-tabs__tab-item active tab-item" data-id="1">
 
                             <div class="block-image-content-tabs__img canvas-img">
                                 <canvas width="592" height="356"></canvas>
@@ -71,7 +71,7 @@
 
                         </div>
 
-                        <div class="block-image-content-tabs__tab-item">
+                        <div class="block-image-content-tabs__tab-item tab-item" data-id="2">
 
                             <div class="block-image-content-tabs__img canvas-img">
                                 <canvas width="592" height="356"></canvas>
@@ -84,7 +84,7 @@
 
                         </div>
 
-                        <div class="block-image-content-tabs__tab-item">
+                        <div class="block-image-content-tabs__tab-item tab-item" data-id="3">
 
                             <div class="block-image-content-tabs__img canvas-img">
                                 <canvas width="592" height="356"></canvas>
@@ -97,7 +97,7 @@
 
                         </div>
 
-                        <div class="block-image-content-tabs__tab-item">
+                        <div class="block-image-content-tabs__tab-item tab-item" data-id="4">
 
                             <div class="block-image-content-tabs__img canvas-img">
                                 <canvas width="592" height="356"></canvas>
@@ -110,7 +110,7 @@
 
                         </div>
 
-                        <div class="block-image-content-tabs__tab-item">
+                        <div class="block-image-content-tabs__tab-item tab-item" data-id="5">
 
                             <div class="block-image-content-tabs__img canvas-img">
                                 <canvas width="592" height="356"></canvas>
