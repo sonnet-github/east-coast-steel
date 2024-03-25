@@ -18,6 +18,7 @@
     $background = get_field('background_color') ?: '#FFFFFF';
     $content = get_field('content');
     $image = get_field('image');
+    $tag = get_field('banner_tag');
     $subtitle = get_field('subtitle');
     $title = get_field('title');
     $button = get_field('button');
@@ -59,6 +60,9 @@
         <div class="block-banner__content-holder">
             <div class="container">
                 <div class="block-banner__content" data-aos="fade-left">
+                    <?php if($tag):?>
+                        <span class="site-btn sm block-banner__tag border-none hover-none"><?= $tag?></span>
+                    <?php endif;?>
                     <?php if($subtitle):?>
                         <small><?= $subtitle?></small>
                     <?php endif;?>
