@@ -1,5 +1,5 @@
 #page-header{
-    padding: 30px $gutter;
+    padding: 30px 32px;
     border-bottom: 1px solid getColor(6);
     position: fixed;
     top: 0;
@@ -17,7 +17,7 @@
     }
 
     .ph-content {
-        max-width: 1370px;
+        // max-width: 1370px;
         margin: 0 auto;
     }
 
