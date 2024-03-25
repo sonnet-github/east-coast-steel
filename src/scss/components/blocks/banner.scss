@@ -56,7 +56,22 @@
             }
         }
 
+        &__tag {
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
         &__btn {
             margin-top: 30px;
         }
+}
+
+.banner-capabilities {
+
+    .block-banner__content {
+        h1 {
+            max-width: 850px;
+        }
+    }
+    
 }
