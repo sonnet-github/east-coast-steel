@@ -12,6 +12,10 @@
     border-radius: 2px;
     transition: background-color .5s $easeOutExpo;
 
+    @media (min-width: 768px) and (max-width: $bp_mobileMenuShift) {
+        font-size: 18px;
+    }
+
     &:hover {
         background-color: getColor(5);
     }
@@ -39,7 +43,7 @@
     background-color: transparent;
     width: 56px;
     height: 56px;
-    border: 2px solid getColor(5);
+    border: 1.5px solid getColor(3);
     border-radius: 2px;
     cursor: pointer;
     transition: background-color .4s $easeOutExpo;

@@ -64,7 +64,7 @@
             <div class="pf-col pf-smi">
                 <p class="pf-title">Follow us on</p>
                 <?php if($social_media):?>
-                    <ul class="site-smi">
+                    <ul class="site-smi site-smi-footer">
                         <?php foreach($social_media as $smi):?>
                             <?php if($smi):?>
                                 <li>
