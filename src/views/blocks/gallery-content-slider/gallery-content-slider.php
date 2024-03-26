@@ -43,11 +43,11 @@
         <div class="container">
 
             <?php if($tag):?>
-                <span class="site-btn block-gallery-content-slider__tag"><?= $tag?></span>
+                <span class="site-btn block-gallery-content-slider__tag" data-aos="fade-left"><?= $tag?></span>
             <?php endif;?>
 
             <?php if($slides):?>
-                <div class="block-gallery-content-slider__wrapper">
+                <div class="block-gallery-content-slider__wrapper" data-aos="fade-zoom-in" data-aos-delay="500">
                     <div class="block-gallery-content-slider__slider owl-carousel">
 
                         <?php foreach($slides as $slide_item):?>

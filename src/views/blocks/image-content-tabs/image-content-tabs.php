@@ -58,7 +58,7 @@
                         <?php if($tabs):
                             $count = 1;    
                         ?>
-                            <ul class="block-image-content-tabs__tab-btn-list">
+                            <ul class="block-image-content-tabs__tab-btn-list" data-aos="fade-right">
                                 <?php foreach($tabs as $tab_btn):?>
                                     <?php if($tab_btn['title']):?>
                                         <li><a href="#" class="tab-btn <?= $count === 1 ? 'active': ''?>" data-id="<?= $count?>"><?= $tab_btn['title']?></a></li>
@@ -67,7 +67,7 @@
                             </ul>
                         <?php endif;?>
                     </div>
-                    <div class="block-image-content-tabs__tab-right">
+                    <div class="block-image-content-tabs__tab-right" data-aos="fade-left">
 
                         <?php if($tabs):
                             $tab_count = 1;    
