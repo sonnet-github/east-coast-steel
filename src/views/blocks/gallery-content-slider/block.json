@@ -1,0 +1,24 @@
+{
+    "name": "acf/gallery-content-slider",
+    "title": "Gallery Content Slider",
+    "description": "Theme styled Gallery Content Slider block.",
+    "category": "custom-layout",
+    "icon": "format-gallery",
+    "keywords": ["gallery-content-slider", "gallery", "rich text", "slider"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "gallery-content-slider.php"
+    },
+    "align": "full",
+    "supports" : {
+        "anchor" : true
+    },
+    "example": {
+        "attributes": {
+            "mode" : "preview",
+            "data" : {
+                "preview_image" : "gallery-content-slider/preview.jpg"
+            }
+        }
+    }
+}

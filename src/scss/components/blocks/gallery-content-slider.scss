@@ -1,0 +1,154 @@
+.block-gallery-content-slider {
+    padding: 105px 0 0;
+
+    @media (max-width: $bp_mobileMenuShift) {
+        padding: 153px 0 35px;
+    }
+
+    &__tag {
+        margin-bottom: 30px;
+    }
+
+        &__wrapper {
+            
+        }
+
+            &__slider {
+                // padding-right: 175px;
+            }
+
+                &__slide-item {
+                    position: relative;
+                    padding-right: 104px;
+
+                    @media (max-width: $bp_mobileMenuShift) {
+                        padding-right: 0;
+                    }
+
+                    h5 {
+                        color: getColor(10);
+                        margin-bottom: 32px;
+
+                        @media (max-width: $bp_mobileLandscape) {
+                            margin-bottom: 24px;
+                        }
+                    }
+
+                    p {
+                        font-weight: 500;
+                        line-height: 150%;
+                        letter-spacing: -0.16px;
+                        color: getColor(7);
+                    }
+                }
+
+                    &__slide-item-content {
+                        width: 53.32%;
+                        margin-left: auto;
+                        padding-top: 20px;
+
+                        @media (max-width: $bp_mobileMenuShift) {
+                            width: 72.64%;
+                            margin: 0;
+                            padding-top: 13px;
+                        }
+
+                        @media (max-width: $bp_mobileLandscape) {
+                            width: 100%;
+                        }
+                    }
+
+                        &__img-mobile {
+                            margin-bottom: 24px;
+                            display: none;
+                            width: 100%;
+
+                            @media (max-width: $bp_mobileLandscape) {
+                                display: block;
+                            }
+                        }
+
+                    &__gallery {
+                        padding-top: 57px;
+                        display: flex;
+                        margin: 0 -15px;
+
+                        @media (max-width: $bp_mobileMenuShift) {
+                            margin: 0;
+                            padding-top: 45px;
+                        }
+
+                        @media (max-width: $bp_mobileLandscape) {
+                            display: none !important;
+                        }
+                    }
+
+                        &__gallery-col-1 {
+                            width: 45.20%;
+                            padding: 0 15px;
+                            margin-top: -225px;
+
+                            @media (max-width: $bp_mobileMenuShift) {
+                                padding: 0 25px 0 0;
+                                margin-top: 0;
+                                width: 59.68%;
+                            }
+                        }
+
+                        &__gallery-col-2 {
+                            padding: 0 15px;
+                            width: 54.8%;
+                            display: flex;
+
+                            @media (max-width: $bp_mobileMenuShift) {
+                                padding: 0;
+                                width: 40.32%;
+                                flex-direction: column;
+                                align-items: flex-end;
+                            }
+                        }
+
+                            &__gallery-item {
+
+                                &.gallery-item-1 {
+                                   
+
+                                
+                                }
+
+                                &.gallery-item-2 {
+                                    padding-right: 30px;
+                                    margin-top: 80px;
+
+                                    @media (max-width: $bp_mobileMenuShift) {
+                                        margin-top: 0;
+                                        padding-right: 0;
+                                        width: 100%;
+                                    }
+                                    
+                                }
+
+                                &.gallery-item-3 {
+
+                                    @media (max-width: $bp_mobileMenuShift) {
+                                        width: 59.64%;
+                                        margin-top: 57px;
+                                    }
+                                }
+                            }
+
+            .owl-nav {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+                .slide-prev-button {
+                    margin-right: 24px;
+                }
+
+            .owl-dots {
+                padding-top: 24px;
+                text-align: center;
+            }
+}

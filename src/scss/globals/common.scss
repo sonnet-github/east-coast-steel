@@ -114,6 +114,20 @@ ol{
 
 }
 
+.hidden-tablet {
+    @media (max-width: $bp_mobileMenuShift) {
+        display: none !important;
+    }
+}
+
+.show-tablet {
+    display: none;
+
+    @media (max-width: $bp_mobileMenuShift) {
+        display: block;
+    }
+}
+
 *[data-ux="scroll-to-anchor"]{
     cursor: pointer;
     user-select: none;

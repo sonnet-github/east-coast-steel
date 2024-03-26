@@ -35,7 +35,8 @@
             'logo-text-list',
             'featured-products',
             'reviews',
-            'image-content-tabs'
+            'image-content-tabs',
+            'gallery-content-slider'
         ];
 
         foreach($acf_blocks as $block){

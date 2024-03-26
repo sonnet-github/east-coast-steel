@@ -8,6 +8,7 @@ import './components/header.ux';
 import './components/featured-products.ux';
 import './components/reviews.ux';
 import './components/image-content-tabs.ux';
+import './components/gallery-content-slider.ux';
 
 class WebApp {
 
