@@ -14,7 +14,7 @@
         }
 
             &__slider {
-                // padding-right: 175px;
+                
             }
 
                 &__slide-item {
@@ -28,9 +28,11 @@
                     h5 {
                         color: getColor(10);
                         margin-bottom: 32px;
+                        padding-right: 50px;
 
                         @media (max-width: $bp_mobileLandscape) {
                             margin-bottom: 24px;
+                            padding-right: 0;
                         }
                     }
 

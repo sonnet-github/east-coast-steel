@@ -49,7 +49,9 @@ class GalleryContentSlider {
             responsive: {
                 768: {
                     nav: true,
-                    dots: false
+                    dots: false,
+                    mouseDrag: false,
+                    touchDrag: false,
                 },
             }
         });
